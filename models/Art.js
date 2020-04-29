@@ -4,8 +4,18 @@ const mongoose = require(`mongoose`);
 const Schema = mongoose.Schema;
 
 const ArtSchema = new Schema({
-  title: String,
-  body: String
+  
+  id: Number,
+  title: {
+    type: String,
+    trim: true
+  },
+  size: String,
+  price: Number,
+  inStock: Boolean,
+  numberInStock: Number,
+  description: String
+
 });
 
 module.exports = mongoose.model(`Art`, ArtSchema);
