@@ -13,6 +13,9 @@ if (process.env.NODE_ENV === `production`) {
   app.use(express.static(`client/build`));
 }
 
+// Static assets in dev
+app.use("/static", express.static("public"));
+
 // Add routes, both API and view
 app.use(routes);
 
