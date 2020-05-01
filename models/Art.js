@@ -14,8 +14,8 @@ const ArtSchema = new Schema({
   price: Number,
   inStock: Boolean,
   numberInStock: Number,
-  description: String
-
+  description: String,
+  image: String
 });
 
 module.exports = mongoose.model(`Art`, ArtSchema);
