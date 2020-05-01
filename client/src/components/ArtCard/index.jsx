@@ -4,31 +4,27 @@ import PropTypes from 'prop-types';
 import './style.css';
 
 
-function itemCard(props) {
+function artCard(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.title} src={props.image} />
-      </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Title:</strong> {props.title}
-          </li>
-          <li>
-            <strong>Size:</strong> {props.size}
-          </li>
-          <li>
-            <strong>Price:</strong> {props.price}
-          </li>
-          <li>
-            <strong>Description:</strong> {props.description}
-          </li>
-        </ul>
-      </div>
+    <div className="row">
+<div className="col s12 m6">
+  <div className="card">
+    <div className="card-image">
+      <img alt={props.title} src={props.image} />
+      <span className="card-title">{props.title}</span>
+      <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
     </div>
+    <div className="card-content">
+      <p>{props.size}</p>
+      <p>{props.price}</p>
+      <p>{props.description}</p>
+    </div>
+  </div>
+</div>
+</div>
   );
 }
+
 
 itemCard.propTypes = {
   children: PropTypes.node,
@@ -38,4 +34,4 @@ itemCard.propTypes = {
   description: PropTypes.string
 }
 
-export default itemCard;
+export default artCard;
