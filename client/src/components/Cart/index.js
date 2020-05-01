@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Cart() {
-    return (
-        <div>
+class Cart extends Component {
+    state = {  }
+    render() { 
+        return ( 
+            <div>
             <h1>cart</h1>
         </div>
-    );
+         );
+    }
 }
-
+ 
 export default Cart;

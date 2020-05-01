@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Bhome() {
-    return (
-        <div>
-            <h1>back home</h1>
-        </div>
-    );
+
+class Bhome extends Component {
+    state = {  }
+    render() { 
+        return (
+            <div>
+                <h1>back home</h1>
+            </div>
+);
+    }
 }
-
+ 
 export default Bhome;
