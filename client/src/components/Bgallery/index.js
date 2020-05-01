@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Bgallery() {
-    return (
-        <div>
-            <h1>back gallery</h1>
-        </div>
-    );
+class Bgallery extends Component {
+    state = {  }
+    render() { 
+        return ( 
+            <div>
+                <h1>back gallery</h1>
+            </div>
+         );
+    }
 }
-
+ 
 export default Bgallery;
