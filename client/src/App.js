@@ -1,25 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import Fhome from './components/Fhome';
+import Fgallery from './components/Fgallery';
+import Cart from './components/Cart';
+import Shipping from './components/Shipping';
+import Bhome from './components/Bhome';
+import Bgallery from './components/Bgallery';
+import LoginPage from './components/LoginPage';
+import Transactions from './components/Transactions';
+
+
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route exact path="/" component={Fhome} />
+      <Route exact path="/gallery" component={Fgallery} />
+      <Route exact path="/cart" component={Cart} />
+      <Route exact path="/shipping" component={Shipping} />
+      <Route exact path="/admin" component={Bhome} />
+      <Route exact path="/admingallery" component={Bgallery} />
+      <Route exact path="/login" component={LoginPage} />
+      <Route exact path="/transactions" component={Transactions} />
+    </Router>
   );
 }
 
