@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './style.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./style.css";
 
 class Header extends React.Component {
   render() {
@@ -8,6 +8,6 @@ class Header extends React.Component {
   }
 }
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+ReactDOM.render(<Header />, document.getElementById("root"));
 
-
+export default Header;
