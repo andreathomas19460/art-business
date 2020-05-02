@@ -8,7 +8,7 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
+    "seed": "node scripts/adminDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
@@ -23,8 +23,11 @@
     "url": "https://github.com/andreathomas19460/art-business/issues"
   },
   "homepage": "https://github.com/andreathomas19460/art-business#readme",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^5.2.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
     "eslint": "^6.8.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.10",
